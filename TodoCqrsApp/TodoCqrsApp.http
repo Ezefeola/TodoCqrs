@@ -1,0 +1,30 @@
+@TodoCqrsApp_HostAddress = http://localhost:5100
+
+GET {{TodoCqrsApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{TodoCqrsApp_HostAddress}}/api/Todo/
+Accept: application/json
+###
+
+GET {{TodoCqrsApp_HostAddress}}/api/Todo/id/2
+Accept: application/json
+###
+
+POST {{TodoCqrsApp_HostAddress}}/api/Todo/
+Accept: application/json
+Content-Type: application/json
+{
+    "title": "test",
+    "description": "test",
+    "status": "FINISHED"
+}
+###
+
+DELETE {{TodoCqrsApp_HostAddress}}/api/Todo?todoId=1
+Accept: application/json
+Content-Type: application/json
+###
+
